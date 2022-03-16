@@ -2,7 +2,14 @@
 - host: ansible
   tasks:
   - name: create docker image
-    command: docker built -t regapp:latest .
+    command: docker built -t petclinicapp:latest .
     args: 
       chdir: /opt/docker
       
+  - name: create a tag to push docker image to dockerhub     
+    command: docker tag petclinic:latest rammady/petclinic:latest
+    
+   - name: push docker image
+    command: docker push rammady/petclinicapp:latest 
+    
+   
