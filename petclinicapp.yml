@@ -7,7 +7,7 @@
       chdir: /opt/docker
       
   - name: create a tag to push docker image to dockerhub     
-    command: docker tag petclinic:latest rammady/petclinic:latest
+    command: docker tag petclinicapp:latest rammady/petclinicapp:latest
     
    - name: push docker image
     command: docker push rammady/petclinicapp:latest 
